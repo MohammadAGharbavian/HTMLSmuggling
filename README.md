@@ -14,7 +14,8 @@ HTML smuggling employs HTML5 attributes that can work offline by storing a binar
  	
 	
 	
-More Explanation :
+More Explanation About Javascript Code : 	
+
 In the index.html file we up a function named download() , what this function does is that when some one 
 open our web site or the link we send to them , it will automatically download the file that we put on the 
 a tag .
